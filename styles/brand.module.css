@@ -1,0 +1,10 @@
+.brand {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.brand:hover {
+  text-decoration: none !important;
+  color: var(--light);
+}

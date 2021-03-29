@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { About, Brand, Navigation, SocialMedia } from '../components';
-import styles from '../styles/home.module.css';
+import styles from '../styles/projects.module.css';
 
-export default function Home() {
+export default function Projects() {
   return (
     <div>
       <Head>
-        <title>William Surya Jaya</title>
+        <title>William Surya Jaya - Projects</title>
         <meta content="William Surya Jaya" property="og:title"></meta>
         <meta content="https://wisuja.github.io" property="og:url"></meta>
         <meta content="William Surya Jaya" property="og:site_name"></meta>
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
         <div className="row">
           <div className="col-12">
-            <Navigation active="home" />
+            <Navigation active="projects"/>
           </div>
         </div>
       </header>

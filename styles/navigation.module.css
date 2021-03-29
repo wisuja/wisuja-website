@@ -1,0 +1,16 @@
+.navbar {
+  background: var(--black);
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.nav {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    font-size: 0.7rem !important;
+  }
+}

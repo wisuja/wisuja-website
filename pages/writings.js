@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { About, Brand, Navigation, SocialMedia } from '../components';
-import styles from '../styles/home.module.css';
+import { About, Articles, Brand, Footer, Navigation, SocialMedia } from '../components';
+import styles from '../styles/writings.module.css';
 
-export default function Home() {
+export default function Writings({ articles }) {
   return (
     <div>
       <Head>
-        <title>William Surya Jaya</title>
+        <title>William Surya Jaya - Writings</title>
         <meta content="William Surya Jaya" property="og:title"></meta>
         <meta content="https://wisuja.github.io" property="og:url"></meta>
         <meta content="William Surya Jaya" property="og:site_name"></meta>
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
         <div className="row">
           <div className="col-12">
-            <Navigation active="home" />
+            <Navigation active="writings" />
           </div>
         </div>
       </header>
@@ -33,7 +33,23 @@ export default function Home() {
             <SocialMedia />
           </div>
         </div>
+        <Articles articles={articles} />
       </main>
+      <Footer />
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja'
+  );
+
+  const articles = await res.json();
+
+  return {
+    props: {
+      articles,
+    },
+  };
+};

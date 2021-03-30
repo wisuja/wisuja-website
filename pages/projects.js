@@ -1,16 +1,32 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { About, Brand, Navigation, SocialMedia } from '../components';
+import {
+  About,
+  Brand,
+  Footer,
+  Navigation,
+  Repos,
+  SocialMedia,
+} from '../components';
 import styles from '../styles/projects.module.css';
 
-export default function Projects() {
+export default function Projects({ repos }) {
   return (
     <div>
       <Head>
         <title>William Surya Jaya - Projects</title>
-        <meta content="William Surya Jaya" property="og:title"></meta>
-        <meta content="https://wisuja.github.io" property="og:url"></meta>
-        <meta content="William Surya Jaya" property="og:site_name"></meta>
+        <meta
+          content="William Surya Jaya - Projects"
+          property="og:title"
+        ></meta>
+        <meta
+          content="https://wisuja.github.io/projects"
+          property="og:url"
+        ></meta>
+        <meta
+          content="William Surya Jaya - Projects"
+          property="og:site_name"
+        ></meta>
       </Head>
       <header className="container mt-3">
         <div className="row">
@@ -20,7 +36,7 @@ export default function Projects() {
         </div>
         <div className="row">
           <div className="col-12">
-            <Navigation active="projects"/>
+            <Navigation active="projects" />
           </div>
         </div>
       </header>
@@ -33,7 +49,21 @@ export default function Projects() {
             <SocialMedia />
           </div>
         </div>
+        <Repos repos={repos} />
       </main>
+      <Footer />
     </div>
   );
 }
+
+export const getStaticProps = async function () {
+  const res = await fetch('https://api.github.com/users/wisuja/repos');
+
+  const repos = await res.json();
+
+  return {
+    props: {
+      repos,
+    },
+  };
+};

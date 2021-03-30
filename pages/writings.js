@@ -1,6 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { About, Articles, Brand, Footer, Navigation, SocialMedia } from '../components';
+import {
+  About,
+  Articles,
+  Brand,
+  Footer,
+  Navigation,
+  SocialMedia,
+} from '../components';
 import styles from '../styles/writings.module.css';
 
 export default function Writings({ articles }) {
@@ -8,9 +15,18 @@ export default function Writings({ articles }) {
     <div>
       <Head>
         <title>William Surya Jaya - Writings</title>
-        <meta content="William Surya Jaya" property="og:title"></meta>
-        <meta content="https://wisuja.github.io" property="og:url"></meta>
-        <meta content="William Surya Jaya" property="og:site_name"></meta>
+        <meta
+          content="William Surya Jaya - Writings"
+          property="og:title"
+        ></meta>
+        <meta
+          content="https://wisuja.github.io/writings"
+          property="og:url"
+        ></meta>
+        <meta
+          content="William Surya Jaya - Writings"
+          property="og:site_name"
+        ></meta>
       </Head>
       <header className="container mt-3">
         <div className="row">

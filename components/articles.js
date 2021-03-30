@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Article from './article';
 import { Button } from 'reactstrap';
 
 export default function Articles({ articles }) {
-  const [articleCount, setArticleCount] = useState(articles.items.length);
+  const articleCountLimit = 6;
 
   return (
     <>
@@ -16,7 +16,7 @@ export default function Articles({ articles }) {
           <p>
             I like to share ideas and thoughts about personal development,
             minimalism and life. Feel free to check out my articles on{' '}
-            <Link href="https://medium.com/@wisuja">
+            <Link href="https://www.medium.com/@wisuja">
               <a className="highlighted">
                 {' '}
                 <u>Medium</u>
@@ -27,7 +27,7 @@ export default function Articles({ articles }) {
         </div>
       </div>
       <div className="row">
-        {articles.items.slice(0, articleCount).map((article, index) => (
+        {articles.items.slice(0, articleCountLimit).map((article) => (
           <Article article={article} key={article.guid} />
         ))}
       </div>

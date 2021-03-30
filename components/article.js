@@ -29,12 +29,12 @@ export default function Article({ article }) {
           </CardSubtitle>
           <div className="mb-2">
             {article.categories.map((category) => (
-              <Badge color="dark" pill className="mx-1" key={category}>
+              <Badge color="secondary" pill className="mx-1" key={category}>
                 <span className="font-weight-normal">{category}</span>
               </Badge>
             ))}
           </div>
-          <Button color="dark">
+          <Button color="dark" size="sm">
             <Link href={article.link} passHref={true}>
               <a target="_blank">Read</a>
             </Link>

@@ -3,4 +3,5 @@ export { default as Articles } from './articles';
 export { default as Brand } from './brand';
 export { default as Footer } from './footer';
 export { default as Navigation } from './navigation';
+export { default as Repos } from './repos';
 export { default as SocialMedia } from './social-media';

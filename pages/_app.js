@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta charSet="UTF-8"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
@@ -29,6 +30,10 @@ function MyApp({ Component, pageProps }) {
         <meta
           name="keywords"
           content="william surya jaya, wisuja, web developer, software developer, minimalism, tech, personal development"
+        />
+        <meta
+          name="google-site-verification"
+          content="1z51jCATexVpodDr7F3kMgAm24F7lhO0wolYM6b2Nb8"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

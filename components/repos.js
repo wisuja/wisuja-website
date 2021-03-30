@@ -16,7 +16,7 @@ export default function Repos({ repos }) {
           <p>
             These are some projects that I've worked on my own. Feel free to
             check out my{' '}
-            <Link href="https://www.github.com/@wisuja">
+            <Link href="https://www.github.com/wisuja">
               <a className="highlighted">
                 {' '}
                 <u>Github</u>
@@ -36,7 +36,7 @@ export default function Repos({ repos }) {
           ))}
       </div>
       <Button color="light" size="sm">
-        <Link href="https://www.github.com/@wisuja" passHref={true}>
+        <Link href="https://www.github.com/wisuja" passHref={true}>
           <a target="_blank">See more on Github</a>
         </Link>
       </Button>

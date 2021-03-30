@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import {
   Card,
-  CardImg,
   CardBody,
   CardTitle,
   CardSubtitle,
@@ -18,8 +17,8 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 export default function Repo({ repo }) {
   return (
     <div className="col-12">
-      <Card className="mb-3">
-        <CardBody style={{ color: 'var(--black)' }}>
+      <Card className="mb-3 card-dark">
+        <CardBody>
           <div className="d-flex justify-content-between align-items-center">
             <CardTitle tag="h5" className="mb-0">
               {repo.name.replace(/-/g, ' ')}
@@ -27,13 +26,13 @@ export default function Repo({ repo }) {
             <CardSubtitle
               tag="p"
               className="font-weight-light"
-              style={{ fontSize: '0.9rem' }}
+              style={{ fontSize: '0.8rem' }}
             >
               {moment(repo.created_at).format('MMMM Do, YYYY')}
             </CardSubtitle>
           </div>
           <div className="my-2">
-            <Badge color="secondary" pill className="py-1 px-2">
+            <Badge color="dark" pill className="py-1 px-2">
               <span className="font-weight-light">{repo.language}</span>
             </Badge>
           </div>

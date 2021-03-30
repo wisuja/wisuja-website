@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Head from 'next/head';
 import Link from 'next/link';
 import { About, Brand, Footer, Navigation, SocialMedia } from '../components';
-import styles from '../styles/home.module.css';
 
 export default function Home() {
   return (
@@ -39,11 +38,9 @@ export default function Home() {
             <SocialMedia />
           </div>
         </div>
-        <div className="row">
-          <div className="col-12">
-            <h2>
-              <u>What I do</u>
-            </h2>
+        <div className="row mt-3">
+          <div className="col-12 text-center">
+            <h2>What I do</h2>
           </div>
         </div>
         <div className="row text-center">
@@ -96,7 +93,11 @@ export default function Home() {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=williamsj26.wsj@gmail.com"
                 passHref={true}
               >
-                <a target="_blank" className="highlighted">
+                <a
+                  target="_blank"
+                  className="highlighted"
+                  title="Mail to William"
+                >
                   message
                 </a>
               </Link>

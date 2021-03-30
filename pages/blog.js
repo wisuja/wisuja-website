@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import {
   About,
   Articles,
@@ -8,23 +7,16 @@ import {
   Navigation,
   SocialMedia,
 } from '../components';
-import styles from '../styles/writings.module.css';
 
-export default function Writings({ articles }) {
+export default function Blog({ articles }) {
   return (
     <div>
       <Head>
-        <title>William Surya Jaya - Writings</title>
+        <title>William Surya Jaya - Blog</title>
+        <meta content="William Surya Jaya - Blog" property="og:title"></meta>
+        <meta content="https://wisuja.github.io/blog" property="og:url"></meta>
         <meta
-          content="William Surya Jaya - Writings"
-          property="og:title"
-        ></meta>
-        <meta
-          content="https://wisuja.github.io/writings"
-          property="og:url"
-        ></meta>
-        <meta
-          content="William Surya Jaya - Writings"
+          content="William Surya Jaya - Blog"
           property="og:site_name"
         ></meta>
       </Head>
@@ -36,7 +28,7 @@ export default function Writings({ articles }) {
         </div>
         <div className="row">
           <div className="col-12">
-            <Navigation active="writings" />
+            <Navigation active="blog" />
           </div>
         </div>
       </header>

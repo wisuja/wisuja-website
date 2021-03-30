@@ -20,7 +20,7 @@ export default function About() {
         <p>
           My name is William Surya Jaya, a.k.a{' '}
           <span className="highlighted">wisuja</span>. I currently work as a
-          software developer for a game company. In this year, I’m 21 years old.
+          software developer for a game company. This year, I’m 21 years old.
         </p>
         <p>
           I’m interested in software development field (web, mobile or even
@@ -49,7 +49,8 @@ export default function About() {
         <a
           href="/documents/CV_William Surya Jaya.pdf"
           download
-          className="btn btn-sm btn-light"
+          className="btn btn-sm btn-dark"
+          title="Download William's CV"
         >
           <FontAwesomeIcon icon={faDownload} className="mr-2"></FontAwesomeIcon>
           Download CV

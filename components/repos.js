@@ -8,11 +8,9 @@ export default function Repos({ repos }) {
 
   return (
     <>
-      <div className="row">
+      <div className="row" id="projects">
         <div className="col-12 text-justify">
-          <h2>
-            <u>Projects I've worked on</u>
-          </h2>
+          <h2>Projects I've worked on</h2>
           <p>
             These are some projects that I've worked on my own. Feel free to
             check out my{' '}
@@ -35,7 +33,7 @@ export default function Repos({ repos }) {
             <Repo repo={repo} key={repo.node_id} />
           ))}
       </div>
-      <Button color="light" size="sm">
+      <Button size="sm" className="btn-dark">
         <Link href="https://www.github.com/wisuja" passHref={true}>
           <a target="_blank">See more on Github</a>
         </Link>

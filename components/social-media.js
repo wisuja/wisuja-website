@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { useMediaQuery } from 'react-responsive';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -18,62 +16,58 @@ import {
 import styles from '../styles/social-media.module.css';
 
 export default function SocialMedia() {
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-
-  let size = isMobile ? 'sm' : 'lg';
-
   return (
     <>
-      <div className="my-3 line"></div>
-      <div className="px-5 d-flex justify-content-between align-items-center">
+      <div className="my-4 line colored-line"></div>
+      <div className="d-flex justify-content-between align-items-center">
         <Link href="https://www.facebook.com/wisujaaa" passHref={true}>
-          <a className={styles.a} target="_blank">
-            <FontAwesomeIcon icon={faFacebook} size={size} />
+          <a className={styles.a} target="_blank" title="William's Facebook">
+            <FontAwesomeIcon icon={faFacebook} className="mx-1" />
           </a>
         </Link>
         <Link href="https://www.instagram.com/wisuja" passHref={true}>
-          <a className={styles.a} target="_blank">
-            <FontAwesomeIcon icon={faInstagram} size={size} />
+          <a className={styles.a} target="_blank" title="William's Instagram">
+            <FontAwesomeIcon icon={faInstagram} className="mx-1" />
           </a>
         </Link>
         <Link href="https://www.github.com/wisuja" passHref={true}>
-          <a className={styles.a} target="_blank">
-            <FontAwesomeIcon icon={faGithub} size={size} />
+          <a className={styles.a} target="_blank" title="William's Github">
+            <FontAwesomeIcon icon={faGithub} className="mx-1" />
           </a>
         </Link>
         <Link href="https://www.linkedin.com/in/wisuja" passHref={true}>
-          <a className={styles.a} target="_blank">
-            <FontAwesomeIcon icon={faLinkedin} size={size} />
+          <a className={styles.a} target="_blank" title="William's Linkedin">
+            <FontAwesomeIcon icon={faLinkedin} className="mx-1" />
           </a>
         </Link>
         <Link
           href="https://mail.google.com/mail/?view=cm&fs=1&to=williamsj26.wsj@gmail.com"
           passHref={true}
         >
-          <a className={styles.a} target="_blank">
-            <FontAwesomeIcon icon={faEnvelope} size={size} />
+          <a className={styles.a} target="_blank" title="William's Mail">
+            <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
           </a>
         </Link>
         <Link href="https://www.medium.com/@wisuja" passHref={true}>
-          <a className={styles.a} target="_blank">
-            <FontAwesomeIcon icon={faMedium} size={size} />
+          <a className={styles.a} target="_blank" title="William's Medium">
+            <FontAwesomeIcon icon={faMedium} className="mx-1" />
           </a>
         </Link>
         <Link href="https://www.twitter.com/wisuja_" passHref={true}>
-          <a className={styles.a} target="_blank">
-            <FontAwesomeIcon icon={faTwitter} size={size} />
+          <a className={styles.a} target="_blank" title="William's Twitter">
+            <FontAwesomeIcon icon={faTwitter} className="mx-1" />
           </a>
         </Link>
         <Link
           href="https://www.youtube.com/channel/UCGPYbOGwATGG-0A53hANYeQ"
           passHref={true}
         >
-          <a className={styles.a} target="_blank">
-            <FontAwesomeIcon icon={faYoutube} size={size} />
+          <a className={styles.a} target="_blank" title="William's Youtube">
+            <FontAwesomeIcon icon={faYoutube} className="mx-1" />
           </a>
         </Link>
       </div>
-      <div className="my-3 line"></div>
+      <div className="my-4 line colored-line"></div>
     </>
   );
 }

@@ -8,11 +8,9 @@ export default function Articles({ articles }) {
 
   return (
     <>
-      <div className="row">
+      <div className="row" id="blog">
         <div className="col-12 text-justify">
-          <h2>
-            <u>Writings</u>
-          </h2>
+          <h2>Blog</h2>
           <p>
             I like to share ideas and thoughts about personal development,
             minimalism and life. Feel free to check out my articles on{' '}
@@ -31,7 +29,7 @@ export default function Articles({ articles }) {
           <Article article={article} key={article.guid} />
         ))}
       </div>
-      <Button color="light" size="sm">
+      <Button size="sm" className="btn-dark">
         <Link href="https://www.medium.com/@wisuja" passHref={true}>
           <a target="_blank">See more on Medium</a>
         </Link>

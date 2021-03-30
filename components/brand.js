@@ -7,7 +7,7 @@ export default function Brand() {
   return (
     <div className="d-flex justify-content-center align-items-center">
       <Link href="/">
-        <a className={styles.brand}>
+        <a className={styles.brand} title="William Surya Jaya">
           <span className="highlighted">Wi</span>
           lliam <span className="highlighted">Su</span>
           rya <span className="highlighted">Ja</span>

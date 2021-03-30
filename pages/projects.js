@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import {
   About,
   Brand,
@@ -8,7 +7,6 @@ import {
   Repos,
   SocialMedia,
 } from '../components';
-import styles from '../styles/projects.module.css';
 
 export default function Projects({ repos }) {
   return (

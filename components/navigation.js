@@ -13,24 +13,27 @@ export default function Navigation({ active }) {
             <NavLink
               href="/"
               className={active == 'home' ? 'font-weight-bold' : ''}
+              title="Home page"
             >
               Home
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
-              href="/projects"
+              href="/projects#projects"
               className={active == 'projects' ? 'font-weight-bold' : ''}
+              title="See William's projects"
             >
               Projects
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
-              href="/writings"
-              className={active == 'writings' ? 'font-weight-bold' : ''}
+              href="/blog#blog"
+              className={active == 'blog' ? 'font-weight-bold' : ''}
+              title="See William's blog"
             >
-              Writings
+              Blog
             </NavLink>
           </NavItem>
         </Nav>

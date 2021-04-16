@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
   faInstagram,
@@ -11,9 +11,9 @@ import {
   faMedium,
   faTwitter,
   faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 
-import styles from "../styles/social-media.module.css";
+import styles from '../styles/social-media.module.css';
 
 export default function SocialMedia() {
   return (
@@ -25,14 +25,14 @@ export default function SocialMedia() {
             <FontAwesomeIcon icon={faFacebook} className="mx-1" />
           </a>
         </Link> */}
-        <Link href="https://www.instagram.com/wisuja" passHref={true}>
-          <a className={styles.a} target="_blank" title="William's Instagram">
-            <FontAwesomeIcon icon={faInstagram} className="mx-1" />
-          </a>
-        </Link>
         <Link href="https://www.github.com/wisuja" passHref={true}>
           <a className={styles.a} target="_blank" title="William's Github">
             <FontAwesomeIcon icon={faGithub} className="mx-1" />
+          </a>
+        </Link>
+        <Link href="https://www.instagram.com/wisuja" passHref={true}>
+          <a className={styles.a} target="_blank" title="William's Instagram">
+            <FontAwesomeIcon icon={faInstagram} className="mx-1" />
           </a>
         </Link>
         <Link href="https://www.linkedin.com/in/wisuja" passHref={true}>

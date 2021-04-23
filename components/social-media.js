@@ -35,6 +35,11 @@ export default function SocialMedia() {
             <FontAwesomeIcon icon={faGithub} className="mx-1" />
           </a>
         </Link>
+        {/* <Link href="https://www.instagram.com/wisuja" passHref={true}>
+          <a className={styles.a} target="_blank" title="William's Instagram">
+            <FontAwesomeIcon icon={faInstagram} className="mx-1" />
+          </a>
+        </Link> */}
         <Link href="https://www.linkedin.com/in/wisuja" passHref={true}>
           <a className={styles.a} target="_blank" title="William's Linkedin">
             <FontAwesomeIcon icon={faLinkedin} className="mx-1" />

@@ -21,10 +21,10 @@ function MyApp({ Component, pageProps }) {
 
         <meta
           name="Description"
-          content="William is a backend developer that highly interested in web technologies. Check out William's projects and writings!"
+          content="William is a software developer that highly interested in web technologies. Check out William's projects and blog!"
         />
         <meta
-          content="William is a backend developer that highly interested in web technologies. Check out William's projects and writings!"
+          content="William is a software developer that highly interested in web technologies. Check out William's projects and blog!"
           property="og:description"
         />
         <meta

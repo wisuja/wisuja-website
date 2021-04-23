@@ -25,11 +25,11 @@ export default function SocialMedia() {
             <FontAwesomeIcon icon={faFacebook} className="mx-1" />
           </a>
         </Link> */}
-        <Link href="https://www.instagram.com/wisuja" passHref={true}>
+        {/* <Link href="https://www.instagram.com/wisuja" passHref={true}>
           <a className={styles.a} target="_blank" title="William's Instagram">
             <FontAwesomeIcon icon={faInstagram} className="mx-1" />
           </a>
-        </Link>
+        </Link> */}
         <Link href="https://www.github.com/wisuja" passHref={true}>
           <a className={styles.a} target="_blank" title="William's Github">
             <FontAwesomeIcon icon={faGithub} className="mx-1" />
@@ -48,11 +48,11 @@ export default function SocialMedia() {
             <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
           </a>
         </Link> */}
-        <Link href="https://www.medium.com/@wisuja" passHref={true}>
+        {/* <Link href="https://www.medium.com/@wisuja" passHref={true}>
           <a className={styles.a} target="_blank" title="William's Medium">
             <FontAwesomeIcon icon={faMedium} className="mx-1" />
           </a>
-        </Link>
+        </Link> */}
         {/* <Link href="https://www.twitter.com/wisuja_" passHref={true}>
           <a className={styles.a} target="_blank" title="William's Twitter">
             <FontAwesomeIcon icon={faTwitter} className="mx-1" />

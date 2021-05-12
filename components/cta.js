@@ -12,7 +12,7 @@ export default function CTA() {
         <p className="font-weight-normal">
           Send me over a{' '}
           <Link
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=williamsj26.wsj@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=hi.wisuja@gmail.com"
             passHref={true}
           >
             <a target="_blank" className="highlighted" title="Mail to William">

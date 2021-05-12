@@ -10,7 +10,7 @@ export default function Repos({ repos }) {
     <>
       <div className="row" id="projects">
         <div className="col-12 text-justify">
-          <h2>Projects I've worked on</h2>
+          <h2>Latest projects I've worked on</h2>
           <p>
             These are some projects that I've worked on my own. Feel free to
             check out my{' '}
@@ -26,7 +26,9 @@ export default function Repos({ repos }) {
       </div>
       <div className="row">
         {repos
-          .filter((item) => item.name !== 'Video-Game-Sales')
+          .filter(
+            (item) => item.name !== 'Video-Game-Sales' && item.name !== 'wisuja'
+          )
           .sort((a, b) => (b.created_at > a.created_at ? 1 : -1))
           .slice(0, reposCountLimit)
           .map((repo) => (

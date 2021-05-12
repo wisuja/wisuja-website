@@ -50,9 +50,9 @@ export default function Repo({ repo }) {
               </a>
             </Link>
           </Button>
-          {repo.homepage !== '' ? (
+          {repo.homepage !== null && repo.homepage !== '' ? (
             <Button color="dark" size="sm">
-              <Link href={repo.html_url} passHref={true}>
+              <Link href={repo.homepage} passHref={true}>
                 <a target="_blank">
                   <FontAwesomeIcon
                     icon={faGlobe}

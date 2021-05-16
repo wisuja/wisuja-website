@@ -3,9 +3,9 @@
 :root {
   --accent: #ec8e00;
   --darkaccent: #e2921ac0;
-  --dark: #202020;
+  --dark: #000928;
   --light: #f6f6f6;
-  --black: #000;
+  --black: #00051a;
   --white: #fff;
 }
 
@@ -58,4 +58,11 @@ a:hover {
   background-color: var(--black);
   color: var(--light);
   border: 1px solid var(--light);
+}
+
+@media screen and (max-width: 992px) {
+  html,
+  body {
+    font-size: 12px;
+  }
 }

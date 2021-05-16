@@ -26,9 +26,6 @@ export default function Repos({ repos }) {
       </div>
       <div className="row">
         {repos
-          .filter(
-            (item) => item.name !== 'Video-Game-Sales' && item.name !== 'wisuja'
-          )
           .sort((a, b) => (b.created_at > a.created_at ? 1 : -1))
           .slice(0, reposCountLimit)
           .map((repo) => (

@@ -2,3 +2,9 @@
   font-weight: 700;
   letter-spacing: 0.2rem;
 }
+
+@media screen and (max-width: 992px) {
+  .hi {
+    margin-top: 1em;
+  }
+}

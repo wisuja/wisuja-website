@@ -55,7 +55,7 @@ export default function Projects({ repos }) {
 }
 
 export const getStaticProps = async function () {
-  const res = await fetch('https://api.github.com/users/wisuja/repos');
+  const res = await fetch('https://api.github.com/users/wisuja/starred');
 
   const repos = await res.json();
 

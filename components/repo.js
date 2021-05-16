@@ -32,7 +32,7 @@ export default function Repo({ repo }) {
             </CardSubtitle>
           </div>
           <div className="my-2">
-            <Badge color="dark" pill className="py-1 px-2">
+            <Badge color="info" pill className="py-1 px-2">
               <span className="font-weight-light">{repo.language}</span>
             </Badge>
           </div>

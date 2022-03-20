@@ -21,7 +21,7 @@ export default function Repo({ repo }) {
         <CardBody>
           <div className="d-flex justify-content-between align-items-center">
             <CardTitle tag="h5" className="mb-0">
-              {repo.name.replace(/-/g, ' ')}
+              {repo.name.replace(/[-_]/g, ' ')}
             </CardTitle>
             <CardSubtitle
               tag="p"

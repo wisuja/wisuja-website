@@ -15,11 +15,11 @@ export default function About() {
       </div>
       <div className="mt-3 col-sm-12 offset-lg-1 col-lg-7 my-auto">
         <h1 className={styles.hi}>Hi there!</h1>
-        <p>
-          I'm William, currently working as a web developer for a game company.
-          I’m interested in web technologies and artificial intelligence. I
-          specialize in Javascript and PHP. I’ve been doing some personal
-          projects in my free time.
+        <p className="text-justify">
+          I'm William, a full-stack web developer with 3+ years of experience in
+          various industries. I'm specialized in backend development and have
+          proficiency in Laravel and JavaScript. Highly interested in
+          technological advancements and personal development.
         </p>
         <p>
           I also write articles for my blog on{' '}
@@ -28,8 +28,8 @@ export default function About() {
               <u>Medium</u>
             </a>
           </Link>
-          . I usually write about tech, minimalism, personal development, and
-          productivity. These topics really intrigued me to be better each day.
+          . I usually write about tech, self development, and personal finance.
+          These topics really intrigued me to be better each day.
         </p>
         <p>
           I also like to connect with new people, so I’ll be waiting for you to

@@ -7,8 +7,10 @@ import {
   Navigation,
   SocialMedia,
 } from '../../components';
+import NotFoundError from '../404';
 
-export default function BlogDetail({ article }) {
+export default function BlogDetail({ isError, article }) {
+  if (isError) return <NotFoundError />;
   return (
     <div>
       <Head>
@@ -48,19 +50,49 @@ export default function BlogDetail({ article }) {
   );
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticPaths = async () => {
   const res = await fetch(
     'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja'
   );
 
   const articles = await res.json();
 
-  const article = articles.items.find((item) => {
+  const guids = articles.items.map((item) => {
+    return item.guid.replace('https://medium.com/p/', '');
+  });
+
+  const paths = guids.map((guid) => ({
+    params: {
+      guid: guid,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (context) => {
+  const res = await fetch(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja'
+  );
+
+  const articles = await res.json();
+
+  let article = articles.items.find((item) => {
     return item.guid == 'https://medium.com/p/' + context.params.guid;
   });
 
+  let isError = false;
+  if (article == undefined) {
+    isError = true;
+    article = null;
+  }
+
   return {
     props: {
+      isError,
       article,
     },
   };

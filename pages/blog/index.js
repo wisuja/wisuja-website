@@ -48,7 +48,7 @@ export default function Blog({ articles }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch(
     'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja'
   );

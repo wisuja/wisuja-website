@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:static": "serve ./out",
     "build": "next build && next export",
     "start": "next start"
   },
@@ -19,6 +20,7 @@
     "next": "10.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "reactstrap": "^8.9.0"
+    "reactstrap": "^8.9.0",
+    "serve": "^13.0.2"
   }
 }

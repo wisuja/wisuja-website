@@ -30,10 +30,10 @@ export default function Info() {
           <div className="d-flex flex-column justify-content-center align-items-center">
             <FontAwesomeIcon icon={faBook} color="white" size="2x" />
             <br />
-            <h6 className="font-weight-bold">Study</h6>
+            <h6 className="font-weight-bold">Read</h6>
             <span className="font-weight-light">
-              As a college student, I'm also studying Information Systems
-              materials.
+              Books are the best source of knowledge. It's intriguing to see how
+              the authors are able to tell magnificent stories.
             </span>
           </div>
         </div>

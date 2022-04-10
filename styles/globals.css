@@ -60,6 +60,17 @@ a:hover {
   border: 1px solid var(--light);
 }
 
+.article-content > figure > img {
+  width: 100%;
+}
+
+.article-content > figure > figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
 @media screen and (max-width: 992px) {
   html,
   body {

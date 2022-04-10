@@ -35,8 +35,13 @@ export default function Article({ article }) {
             ))}
           </div>
           <Button size="sm" className="btn-dark">
-            <Link href={article.link} passHref={true}>
-              <a target="_blank">Read</a>
+            <Link
+              href={
+                '/blog/' + article.guid.replace('https://medium.com/p/', '')
+              }
+              passHref={true}
+            >
+              <a>Read</a>
             </Link>
           </Button>
         </CardBody>

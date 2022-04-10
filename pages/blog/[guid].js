@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import {
   About,
-  Articles,
+  ArticleDetail,
   Brand,
   Footer,
   Navigation,
   SocialMedia,
-} from '../components';
+} from '../../components';
 
-export default function Blog({ articles }) {
+export default function BlogDetail({ article }) {
   return (
     <div>
       <Head>
@@ -41,23 +41,27 @@ export default function Blog({ articles }) {
             <SocialMedia />
           </div>
         </div>
-        <Articles articles={articles} />
+        <ArticleDetail article={article} />
       </main>
       <Footer />
     </div>
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async (context) => {
   const res = await fetch(
     'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja'
   );
 
   const articles = await res.json();
 
+  const article = articles.items.find((item) => {
+    return item.guid == 'https://medium.com/p/' + context.params.guid;
+  });
+
   return {
     props: {
-      articles,
+      article,
     },
   };
 };

@@ -1,5 +1,6 @@
 export { default as About } from './about';
 export { default as Articles } from './articles';
+export { default as ArticleDetail } from './article-detail';
 export { default as Brand } from './brand';
 export { default as CTA } from './cta';
 export { default as Footer } from './footer';

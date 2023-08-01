@@ -1,17 +1,20 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { Button } from 'reactstrap';
-import { About, Brand, Footer, Navigation, SocialMedia } from '../components';
+import Head from "next/head";
+import Link from "next/link";
+import { Button } from "reactstrap";
+import { About, Brand, Footer, Navigation, SocialMedia } from "../components";
 
 export default function NotFoundError() {
   return (
     <div>
       <Head>
-        <title>William Surya Jaya - Blog</title>
-        <meta content="William Surya Jaya - Blog" property="og:title"></meta>
-        <meta content="https://wisuja.github.io/blog" property="og:url"></meta>
+        <title>Article Not Found | William Surya Jaya</title>
         <meta
-          content="William Surya Jaya - Blog"
+          content="Article Not Found | William Surya Jaya"
+          property="og:title"
+        ></meta>
+        <meta content="https://wisuja.com/blog" property="og:url"></meta>
+        <meta
+          content="Article Not Found | William Surya Jaya"
           property="og:site_name"
         ></meta>
       </Head>
@@ -40,6 +43,7 @@ export default function NotFoundError() {
           <div className="col-12">
             <h4 className="text-center text-danger">Page not found.</h4>
           </div>
+          <div className="col-12">&nbsp;</div>
           <div className="col-12">
             <h6 className="text-center">
               Please refer to the following links.
@@ -47,7 +51,7 @@ export default function NotFoundError() {
           </div>
           <div
             className="col-12 d-flex justify-content-center align-items-center"
-            style={{ gap: '1rem' }}
+            style={{ gap: "1rem" }}
           >
             <Button size="sm" className="btn-dark">
               <Link href="/">

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import {
   About,
   ArticleDetail,
@@ -6,19 +6,19 @@ import {
   Footer,
   Navigation,
   SocialMedia,
-} from '../../components';
-import NotFoundError from '../404';
+} from "../../components";
+import NotFoundError from "../404";
 
 export default function BlogDetail({ isError, article }) {
   if (isError) return <NotFoundError />;
   return (
     <div>
       <Head>
-        <title>William Surya Jaya - Blog</title>
-        <meta content="William Surya Jaya - Blog" property="og:title"></meta>
-        <meta content="https://wisuja.github.io/blog" property="og:url"></meta>
+        <title>{article.title} | William Surya Jaya</title>
+        <meta content="Blog | William Surya Jaya" property="og:title"></meta>
+        <meta content="https://wisuja.com/blog" property="og:url"></meta>
         <meta
-          content="William Surya Jaya - Blog"
+          content="Blog | William Surya Jaya"
           property="og:site_name"
         ></meta>
       </Head>
@@ -52,13 +52,13 @@ export default function BlogDetail({ isError, article }) {
 
 export const getStaticPaths = async () => {
   const res = await fetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja'
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja"
   );
 
   const articles = await res.json();
 
   const guids = articles.items.map((item) => {
-    return item.guid.replace('https://medium.com/p/', '');
+    return item.guid.replace("https://medium.com/p/", "");
   });
 
   const paths = guids.map((guid) => ({
@@ -75,13 +75,13 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja'
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja"
   );
 
   const articles = await res.json();
 
   let article = articles.items.find((item) => {
-    return item.guid == 'https://medium.com/p/' + context.params.guid;
+    return item.guid == "https://medium.com/p/" + context.params.guid;
   });
 
   let isError = false;

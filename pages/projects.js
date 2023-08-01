@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import {
   About,
   Brand,
@@ -6,23 +6,20 @@ import {
   Navigation,
   Repos,
   SocialMedia,
-} from '../components';
+} from "../components";
 
 export default function Projects({ repos }) {
   return (
     <div>
       <Head>
-        <title>William Surya Jaya - Projects</title>
+        <title>Projects | William Surya Jaya</title>
         <meta
-          content="William Surya Jaya - Projects"
+          content="Projects | William Surya Jaya"
           property="og:title"
         ></meta>
+        <meta content="https://wisuja.com/projects" property="og:url"></meta>
         <meta
-          content="https://wisuja.github.io/projects"
-          property="og:url"
-        ></meta>
-        <meta
-          content="William Surya Jaya - Projects"
+          content="Projects | William Surya Jaya"
           property="og:site_name"
         ></meta>
       </Head>
@@ -55,7 +52,7 @@ export default function Projects({ repos }) {
 }
 
 export const getStaticProps = async function () {
-  const res = await fetch('https://api.github.com/users/wisuja/starred');
+  const res = await fetch("https://api.github.com/users/wisuja/starred");
 
   const repos = await res.json();
 

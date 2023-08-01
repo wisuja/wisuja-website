@@ -1,12 +1,12 @@
-import Head from 'next/head';
+import Head from "next/head";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
-import '../styles/globals.css';
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -21,15 +21,15 @@ function MyApp({ Component, pageProps }) {
 
         <meta
           name="Description"
-          content="William is a software developer that highly interested in web technologies. Check out William's projects and blog!"
+          content="William is a highly skilled web developer with several years of expertise. Discover a portfolio of impressive projects and a collection of insightful blogs."
         />
         <meta
-          content="William is a software developer that highly interested in web technologies. Check out William's projects and blog!"
+          content="William is a highly skilled web developer with several years of expertise. Discover a portfolio of impressive projects and a collection of insightful blogs."
           property="og:description"
         />
         <meta
           name="keywords"
-          content="william surya jaya, wisuja, web developer, software developer, minimalism, tech, personal development"
+          content="web developer, web design, website developer, programmer, coder, wisuja, william surya jaya"
         />
         <meta
           name="google-site-verification"

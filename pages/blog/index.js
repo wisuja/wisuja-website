@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import {
   About,
   Articles,
@@ -6,17 +6,17 @@ import {
   Footer,
   Navigation,
   SocialMedia,
-} from '../../components';
+} from "../../components";
 
 export default function Blog({ articles }) {
   return (
     <div>
       <Head>
-        <title>William Surya Jaya - Blog</title>
-        <meta content="William Surya Jaya - Blog" property="og:title"></meta>
-        <meta content="https://wisuja.github.io/blog" property="og:url"></meta>
+        <title>Blog | William Surya Jaya</title>
+        <meta content="Blog | William Surya Jaya" property="og:title"></meta>
+        <meta content="https://wisuja.com/blog" property="og:url"></meta>
         <meta
-          content="William Surya Jaya - Blog"
+          content="Blog | William Surya Jaya"
           property="og:site_name"
         ></meta>
       </Head>
@@ -50,7 +50,7 @@ export default function Blog({ articles }) {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja'
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wisuja"
   );
 
   const articles = await res.json();

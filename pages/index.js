@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import {
   About,
   Brand,
@@ -7,16 +7,22 @@ import {
   Info,
   Navigation,
   SocialMedia,
-} from '../components';
+} from "../components";
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>William Surya Jaya</title>
-        <meta content="William Surya Jaya" property="og:title"></meta>
-        <meta content="https://wisuja.github.io" property="og:url"></meta>
-        <meta content="William Surya Jaya" property="og:site_name"></meta>
+        <title>William Surya Jaya - Web Developer, Blogger, Streamer</title>
+        <meta
+          content="William Surya Jaya - Web Developer, Blogger, Streamer"
+          property="og:title"
+        ></meta>
+        <meta content="https://wisuja.com" property="og:url"></meta>
+        <meta
+          content="William Surya Jaya - Web Developer, Blogger, Streamer"
+          property="og:site_name"
+        ></meta>
       </Head>
       <header className="container mt-3">
         <div className="row">

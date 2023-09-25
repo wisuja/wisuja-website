@@ -16,7 +16,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="images/profile.jpg" />
+        <meta
+          property="og:image"
+          content="https://wisuja.com/images/profile.jpg"
+        />
         <meta name="author" content="William Surya Jaya" />
         <meta name="copyright" content="William Surya Jaya" />
 
